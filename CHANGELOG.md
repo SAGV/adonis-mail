@@ -1,3 +1,58 @@
+<a name="3.0.3"></a>
+## [3.0.3](https://github.com/adonisjs/adonis-mail/compare/v3.0.2...v3.0.3) (2017-10-03)
+
+
+### Bug Fixes
+
+* **mail:** use in-memory mail fake ([4665cbe](https://github.com/adonisjs/adonis-mail/commit/4665cbe))
+
+
+
+<a name="3.0.2"></a>
+## [3.0.2](https://github.com/adonisjs/adonis-mail/compare/v3.0.1...v3.0.2) (2017-09-06)
+
+
+### Features
+
+* **mail:** add memory driver and mail fakes ([bdc67a6](https://github.com/adonisjs/adonis-mail/commit/bdc67a6))
+
+
+
+<a name="3.0.1"></a>
+## [3.0.1](https://github.com/adonisjs/adonis-mail/compare/v3.0.0...v3.0.1) (2017-08-26)
+
+
+### Features
+
+* **mail:** proxy mailsender methods ([01c19c9](https://github.com/adonisjs/adonis-mail/commit/01c19c9))
+
+
+
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/adonisjs/adonis-mail/compare/v2.0.2...v3.0.0) (2017-08-26)
+
+
+### Bug Fixes
+
+* **sender:** pass view instance to mail sender ([94b20f2](https://github.com/adonisjs/adonis-mail/commit/94b20f2))
+
+
+### Features
+
+* fresh new start ([1d57bb6](https://github.com/adonisjs/adonis-mail/commit/1d57bb6))
+* rewrite for 4.0 ([62cecfa](https://github.com/adonisjs/adonis-mail/commit/62cecfa))
+* **driver:** add mailgun driver ([99ff8ff](https://github.com/adonisjs/adonis-mail/commit/99ff8ff))
+* **driver:** add Ses driver ([7d13d9e](https://github.com/adonisjs/adonis-mail/commit/7d13d9e))
+* **driver:** add sparkpost driver ([76944b5](https://github.com/adonisjs/adonis-mail/commit/76944b5))
+* **driver:** sparkpost now accepts extras for mail ([604650a](https://github.com/adonisjs/adonis-mail/commit/604650a))
+* **driver:** write smtp driver ([e3d2832](https://github.com/adonisjs/adonis-mail/commit/e3d2832))
+* **drivers:** drivers receives the config via `setConfig` method ([45911a3](https://github.com/adonisjs/adonis-mail/commit/45911a3))
+* **instructions:** add instructions for `adonis install` ([83cc8d0](https://github.com/adonisjs/adonis-mail/commit/83cc8d0))
+* **message:** allow sending driver extras ([91430c9](https://github.com/adonisjs/adonis-mail/commit/91430c9))
+* **providers:** add providers ([3e43cde](https://github.com/adonisjs/adonis-mail/commit/3e43cde))
+
+
+
 <a name="2.0.2"></a>
 ## [2.0.2](https://github.com/adonisjs/adonis-mail/compare/v2.0.1...v2.0.2) (2016-10-11)
 
