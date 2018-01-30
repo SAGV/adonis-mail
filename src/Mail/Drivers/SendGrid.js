@@ -66,7 +66,14 @@ class SendGridTransporter {
    *
    * @private
    */
-  _addressToSendgridAddress (contact) {
+  _addressToSendgridAddress (contact, toField) {
+
+    // To fields are supposed to be wrapped into double quotes if they consist forbidded symbols. It doesn't harm to always wrap those.
+    // See https://stackoverflow.com/questions/15555563/how-to-format-an-email-from-header-that-contains-a-comma
+    if (toField) {
+      return { name: `"${contact.name.replace('"', "\"")}"`, email: contact.address }
+    }
+
     return { name: contact.name, email: contact.address }
   }
 
@@ -120,7 +127,7 @@ class SendGridTransporter {
       body.from = this._addressToSendgridAddress(mail.data.from[0])
 
       // Add all recipient obejcts
-      const toObjects = mail.data.to.map(contact => this._addressToSendgridAddress(contact))
+      const toObjects = mail.data.to.map(contact => this._addressToSendgridAddress(contact, true))
 
       // Add to recipients to body with subject
       body.personalizations.push({
@@ -145,12 +152,6 @@ class SendGridTransporter {
       }
 
       // Send request to api
-
-      console.log(body)
-      console.log(JSON.stringify(body))
-      console.log(this.authHeader)
-
-
       got.post(this.endpoint, {
         body: body,
         json: true,
