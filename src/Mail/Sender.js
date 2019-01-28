@@ -150,6 +150,7 @@ class MailSender {
   raw (body, callback) {
     const message = new Message()
     message.text(body)
+    message.html(body)
     callback(message)
     return this._driverInstance.send(message.toJSON())
   }

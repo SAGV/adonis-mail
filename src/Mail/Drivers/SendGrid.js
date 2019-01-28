@@ -121,8 +121,6 @@ class SendGridTransporter {
         body.attachments = attachments
       }
 
-      console.log(mail.data)
-
       // Add from object
       body.from = this._addressToSendgridAddress(mail.data.from[0])
 
